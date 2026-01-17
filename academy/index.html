@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrivateNeuron - Learning Under Construction</title>
+    <!-- Google Fonts for a friendly, educational look -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Palette: Bright, friendly, educational colors */
+            --primary: #3A86FF;   /* Blue */
+            --secondary: #FF006E; /* Pink/Red */
+            --accent: #FFBE0B;    /* Citric Yellow */
+            --tertiary: #8338EC;  /* Purple */
+            --bg: #F0F4F8;        /* Light Grey-Blue */
+            --text-main: #2D3748;
+            --text-light: #718096;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            background-image: radial-gradient(var(--primary) 1px, transparent 1px), radial-gradient(var(--secondary) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: 0 0, 25px 25px;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Floating background elements */
+        .bg-shape {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.2;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-1 { top: 10%; left: 10%; font-size: 4rem; color: var(--tertiary); animation-delay: 0s; }
+        .shape-2 { bottom: 15%; right: 10%; font-size: 5rem; color: var(--accent); animation-delay: 1s; }
+        .shape-3 { bottom: 20%; left: 20%; font-size: 3rem; color: var(--secondary); animation-delay: 2s; }
+        .shape-4 { top: 15%; right: 20%; font-size: 4rem; color: var(--primary); animation-delay: 3s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+            border-bottom: 8px solid var(--tertiary);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 0px rgba(58, 134, 255, 0.2);
+        }
+
+        h2 {
+            font-family: 'Fredoka One', cursive;
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 190, 11, 0.4);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #ffca2c;
+            box-shadow: 0 6px 20px rgba(255, 190, 11, 0.6);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-shape shape-1">ABC</div>
+    <div class="bg-shape shape-2">123</div>
+    <div class="bg-shape shape-3">✖️</div>
+    <div class="bg-shape shape-4">➗</div>
+
+    <div class="container">
+        <div class="card">
+            <img src="assets/construction_edu.png" alt="Educational Construction Site" class="hero-image">
+            <h1>Building Bright Minds</h1>
+            <h2>We're constructing something amazing!</h2>
+            <p>Our team of learning architects is hard at work laying the foundation for a new educational experience. We're mixing creativity, logic, and fun to help you grow!</p>
+            <a href="/" class="btn">Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 PrivateNeuron. All rights reserved.
+    </footer>
+
+</body>
+</html>
