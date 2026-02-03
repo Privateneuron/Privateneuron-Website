@@ -6,6 +6,13 @@
     <link rel="icon" href="company.ico">
     <title>PrivateNeuron - Coming Soon</title>
     
+    <!-- Redirect www to non-www -->
+    <script>
+      if (window.location.hostname === 'www.privateneuron.com') {
+        window.location.href = 'https://privateneuron.com' + window.location.pathname + window.location.search;
+      }
+    </script>
+    
     <!-- SEO Meta Tags -->
     <meta name="description" content="PrivateNeuron is an innovative platform leveraging neural networks and artificial intelligence technology. Coming soon with groundbreaking solutions.">
     <meta name="keywords" content="neural networks, artificial intelligence, AI, machine learning, PrivateNeuron, deep learning, data science">

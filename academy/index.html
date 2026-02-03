@@ -6,6 +6,13 @@
     <link rel="icon" href="../company.ico">
     <title>PrivateNeuron Academy - Online Learning Platform</title>
     
+    <!-- Redirect www to non-www -->
+    <script>
+      if (window.location.hostname === 'www.privateneuron.com') {
+        window.location.href = 'https://privateneuron.com' + window.location.pathname + window.location.search;
+      }
+    </script>
+    
     <!-- SEO Meta Tags -->
     <meta name="description" content="PrivateNeuron Academy offers innovative online courses in artificial intelligence, machine learning, neural networks, and data science. Build bright minds with cutting-edge education.">
     <meta name="keywords" content="online education, machine learning courses, AI training, data science, neural networks, online learning platform, educational technology">
