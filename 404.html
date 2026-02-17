@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <script>
+        // GitHub Pages SPA redirect: stores the deep-link path in sessionStorage
+        // then redirects to /academy/ where index.html picks it up via React Router.
+        sessionStorage.redirect = location.href;
+        location.replace(location.pathname.split('/').slice(0, 2).join('/') + '/');
+    </script>
+</head>
+
+<body>
+    Redirecting&hellip;
+</body>
+
+</html>
